@@ -1,25 +1,43 @@
-package ph.service;
+package pid.reviewBoard.service;
 
 import java.util.Date;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class BoardVO {
+	
 	private int boardNo;
 	private String title;
 	private String content;
 	private Date wdate;
 	private String boardType;
+	
+	//검색기능
+	private String searchCondition;
+	private String searchKeyword;
+	
+	
 	private String memberId;
 	private String memberNickname;
+	
 	private String employeeId;
 	private String employeeNickname;
 	private String employeeRole;
+	
 	private String reviewPicturePath;
-	// 리뷰게시판일시 사진 등록? 할만한 부분
+	private int countingStars;
+	
+	//페이징
+	private int viewPage = 1;
+	private int startIndex = 0;
+	private int endIndex = 10;
+	
+	private int pageList = 5;
+	private int firstPage = 0;
+	private int lastPage = 0;
+	
+
 }

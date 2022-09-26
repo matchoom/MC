@@ -1,4 +1,4 @@
-package ph.service;
+package pid.qnaBoard.service;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@Data 
 @AllArgsConstructor
 @NoArgsConstructor
 public class BoardVO {
@@ -17,9 +17,19 @@ public class BoardVO {
 	private String boardType;
 	private String memberId;
 	private String memberNickname;
-	private String employeeId;
-	private String employeeNickname;
-	private String employeeRole;
 	private String reviewPicturePath;
 	// 리뷰게시판일시 사진 등록? 할만한 부분
+	
+	private int viewPage = 1;
+	private int startIndex = 0;
+	private int endIndex = 10;
+	
+	private int pageList = 5;
+	private int firstPage = 0;
+	private int lastPage = 0;
+	
+	
+	private String searchCondition;
+	private String searchKeyword;
+	
 }
