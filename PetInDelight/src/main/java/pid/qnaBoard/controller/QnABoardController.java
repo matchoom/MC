@@ -25,6 +25,7 @@ import pid.qnaBoard.service.ReplyQnABoardVO;
 
 @Controller
 public class QnABoardController {
+	//212345654986321321asdasdasd
 	
 	@Resource(name = "memberService")
 	private MembersService service;
